@@ -4,6 +4,7 @@ Router.map ->
     path: "/"
     template: 'board'
     layoutTemplate: 'empty_layout'
+    subscriptions: ->  Meteor.subscribe "stickies"
 
 
   @route "notFound",

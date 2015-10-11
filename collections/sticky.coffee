@@ -4,7 +4,9 @@
 
 Stickies.allow
   insert: (userId, doc) ->
-    true
+    if Stickies.find().count() > 9
+      return false
+    return true
 
   update: (userId, doc) ->
     true
