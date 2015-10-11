@@ -4,7 +4,7 @@
   position: absolute
 
 .sticky
-  background: hsl(207, 90%, 77%)
+  background: hsl(207, 89%, 86%)
   position: absolute
   min-width: 200px
   min-height: 200px
@@ -23,6 +23,34 @@
   .add
   .change-color
     cursor: pointer
+
+.new-board-name
+  width: 0px
+  transition: width .2s, opacity .2s
+  padding: 0px 6px
+  margin: 4px 8px 0 0
+  line-height: 23px
+  vertical-align: top
+  opacity: 0
+
+.add-board-container
+  position: absolute
+  top: 8px
+  right: 8px
+  &:hover .new-board-name
+   width: 182px
+   opacity: 1
+
+.add-board
+  background: none
+  border: solid 2px hsl(194, 100%, 17%)
+  border-radius: 50%
+  outline: none
+  width: 32px
+  font-size: 22px
+  height: 32px
+  line-height: 21px
+  cursor:pointer
 
 
 .bg-pattern-1

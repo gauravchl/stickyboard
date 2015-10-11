@@ -41,10 +41,11 @@ Template.sticky.events
 
   "click .add": (e) ->
     currentSticky = Template.currentData()
-    Stickies.insert
+    data =
       top: currentSticky.top + 12
       left: currentSticky.left + 12
-
+    data.boardId = Boards.findOne()._id if Boards.findOne()
+    Stickies.insert data
 
 
   "click .change-color": (e) ->
