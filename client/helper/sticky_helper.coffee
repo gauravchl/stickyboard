@@ -7,6 +7,6 @@
       left: left
 
 
-  throttledUpdatePosition: throttle (id, top, left) ->
+  throttledUpdatePosition: _.throttle (id, top, left) ->
     StickyHelper.updatePosition id, top, left
   , 100, {leading:false}
