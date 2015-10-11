@@ -39,14 +39,27 @@ Template.sticky.events
       top: currentSticky.top + 12
       left: currentSticky.left + 12
 
+  "click .change-color": (e)->
+    currentHue = Template.currentData().hue
+    if currentHue
+      newHue = if currentHue > 350 then 0 else currentHue + 20
+    else
+      newHue = 1
+    Stickies.update @_id, $set:{ hue: newHue }
+
+
+
+
+
 Template.sticky.helpers
   stickyContent: ->
-    stickyId = @_id
-    console.log "#GC"
-
     container = Blaze.toHTMLWithData(Template.contentEditable, {content: @content})
     new Spacebars.SafeString(container)
 
+  bg: ->
+    if @hue
+      return "hsla("+@hue+", 100%, 68%, 1)"
+    return false
 
 
 Template.contentEditable.helpers
