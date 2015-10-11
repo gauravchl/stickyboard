@@ -10,7 +10,6 @@ Template.board.events
       return false
     else
       Meteor.call "add_board", boardName, (e, r)->
-        console.log r
         if r
           Router.go 'board', {boardName:boardName}
 
