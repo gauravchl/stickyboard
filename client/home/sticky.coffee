@@ -58,7 +58,7 @@ Template.sticky.helpers
 
   bg: ->
     if @hue
-      return "hsla("+@hue+", 100%, 68%, 1)"
+      return "hsla("+@hue+", 100%, 84%, 1)"
     return false
 
 
