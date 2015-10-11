@@ -21,8 +21,6 @@ Template.sticky.events
   "dragend .sticky": (e) ->
     $ele = $(e.target)
     $ele.css "opacity": 1
-    eve = e.originalEvent
-    StickyHelper.throttledUpdatePosition @_id, eve.pageY - posY, eve.pageX - posX
 
 
 
