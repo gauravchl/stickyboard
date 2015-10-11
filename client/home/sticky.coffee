@@ -39,7 +39,7 @@ Template.sticky.events
 
 
 
-  "click .add": (e)->
+  "click .add": (e) ->
     currentSticky = Template.currentData()
     Stickies.insert
       top: currentSticky.top + 12
@@ -47,7 +47,7 @@ Template.sticky.events
 
 
 
-  "click .change-color": (e)->
+  "click .change-color": (e) ->
     currentHue = Template.currentData().hue
     if currentHue
       newHue = if currentHue > 350 then 0 else (currentHue + 20)
