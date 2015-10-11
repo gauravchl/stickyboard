@@ -7,7 +7,7 @@
   background: #E2D633;
   position: absolute;
   width: 200px;
-  height: 200px;
+  min-height: 200px;
   left: 120px;
   top: 200px;
   overflow: hidden;
@@ -17,6 +17,12 @@
     padding: 0 8px
   .content
     padding: 8px
+    outline: none
+    resize: both
+
+  .remove
+  .add
+    cursor: pointer
 
 .bg-pattern-1
   background: radial-gradient(rgba(0, 0, 0, 0.13) 14%, rgba(0, 0, 0, 0) 9%) 0 0, radial-gradient(rgba(0, 0, 0, 0.14) 8%, transparent 8%) 8px 8px

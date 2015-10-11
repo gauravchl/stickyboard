@@ -1,7 +1,8 @@
 <template name="board">
-  <div id="board" class="bg-pattern-1">
+  <div id="board">
     this is sample board
-
-    {{> sticky}}
+    {{#each stickies}}
+      {{> sticky}}
+    {{/each}}
   </div>
 </template>
