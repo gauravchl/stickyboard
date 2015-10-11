@@ -50,7 +50,7 @@ Template.sticky.events
   "click .change-color": (e) ->
     currentHue = Template.currentData().hue
     if currentHue
-      newHue = if currentHue > 350 then 0 else (currentHue + 20)
+      newHue = if currentHue > 350 then 0 else (currentHue + 18)
     else
       newHue = 1
     Stickies.update @_id, $set:{ hue: newHue }
